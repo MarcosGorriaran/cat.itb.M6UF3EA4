@@ -1,5 +1,5 @@
 ﻿using cat.itb.M6UF3EA2.helpers;
-using cat.itb.M6UF3EA4.helpers;
+using cat.itb.M6UF3EA4.cruds;
 
 namespace cat.itb.M6UF3EA4;
 
@@ -17,6 +17,8 @@ public class Driver
             {"1","Import restaurants"},
             {"2A", "Group and count cuisines"},
             {"2B", "Show amount of grades"},
+            {"2C", "Show maximum score on each restaurant" },
+            {"2D", "Cuissine for each borough"},
             {ExitOption,ExitText}
         }, AskValue);
         string option;
@@ -36,6 +38,12 @@ public class Driver
                     break;
                 case "2B":
                     Console.WriteLine(EA4CRUD.ACT2BShowRestaurant());
+                    break;
+                case "2C":
+                    Console.WriteLine(EA4CRUD.ACT2CShowRestaurant());
+                    break;
+                case "2D":
+                    Console.WriteLine(EA4CRUD.ACT2DShowTypeForEachBorough());
                     break;
             }
         } while (option != ExitOption);
